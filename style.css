@@ -1,0 +1,1019 @@
+/* General Body and Typography */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+.header {
+    background-color: #ffffff;
+    padding: 15px 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+.logo {
+    height: 50px; /* Adjust as needed */
+    max-width: 100%;
+}
+
+.main-nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    min-width: 300px; /* Ensure nav doesn't shrink too much */
+}
+
+/* Tab Buttons */
+.tab {
+    display: flex;
+    overflow: hidden;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* Allow buttons to wrap */
+    gap: 2px; /* Small gap between buttons for better wrapping */
+}
+
+.tab button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: 0.3s ease;
+    font-size: 16px;
+    color: #555;
+    font-weight: 500;
+    flex: 1 1 auto; /* Allow buttons to adjust size */
+    min-width: 100px; /* Prevent them from becoming too small */
+}
+
+.tab button:hover {
+    background-color: #f0f0f0;
+    color: #3498db;
+}
+
+.tab button.active {
+    background-color: #3498db;
+    color: white;
+    border-bottom: 3px solid #2980b9;
+}
+
+.auth-buttons {
+    flex-shrink: 0;
+    margin-left: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 6px 6px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.btn-secondary {
+    background-color: #f0f0f0;
+    color: #3498db;
+    border: 1px solid #3498db;
+}
+
+.btn-secondary:hover {
+    background-color: #e0e0e0;
+    color: #2980b9;
+}
+
+/* Main Content Area */
+.main-content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Tab Content */
+.tabcontent {
+    display: none;
+    padding: 20px 0;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.tabcontent.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2em;
+    color: #1086fd;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #3498db;
+    border-radius: 2px;
+}
+
+/* Image Slider Styles */
+.image-slider {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.slides-container {
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+    display: none; /* Hidden by default, managed by JS */
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    height: 400px; /* Fixed height for consistency */
+    object-fit: cover; /* Cover the area, crop if necessary */
+    border-radius: 8px;
+}
+
+.slide-text {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.5em;
+    text-align: center;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Slider Navigation Arrows */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Slider Dots */
+.dots-container {
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot.active, .dot:hover {
+    background-color: #717171;
+}
+
+
+/* Home Section Specific Styles */
+.stats-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.stat-item {
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    padding: 30px 20px;
+    flex: 1;
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.stat-item .stat-number {
+    font-size: 3em;
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.stat-item .stat-label {
+    font-size: 1.2em;
+    color: #555;
+    font-weight: 500;
+}
+
+.message-section {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+
+/* Legacy Section Specific Styles */
+.person-message {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-left: 5px solid #3498db;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+}
+
+.person-message:nth-child(even) {
+    flex-direction: row-reverse; /* Alternate image position */
+    border-right: 5px solid #3498db;
+    border-left: none;
+}
+
+.person-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #3498db;
+    flex-shrink: 0;
+}
+
+.person-text {
+    flex-grow: 1;
+}
+
+.person-text h2, .person-text h4 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+/* Programs Section Specific Styles */
+.program-category {
+    margin-bottom: 40px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+    background-color: #fcfcfc;
+}
+
+.program-category h3 {
+    color: #3498db;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 10px;
+}
+
+.program-category ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.program-item {
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: 500;
+    color: #444;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.program-item:hover {
+    background-color: #dbe4e6;
+    transform: translateX(5px);
+}
+
+.program-item span {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+/* Text animation for program items */
+.program-item span::before {
+    content: attr(data-text); /* Use data-text to hold the original text */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #3498db; /* Color for the animated text */
+    transform: translateY(100%);
+    transition: transform 0.3s ease-out;
+}
+
+.program-item:hover span::before {
+    transform: translateY(0);
+}
+
+
+/* About Section Specific Styles */
+.about-text {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 20px;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+.about-text ul {
+    list-style: disc inside;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.about-text ul li {
+    margin-bottom: 8px;
+}
+
+/* Events Section Specific Styles */
+.event-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+}
+
+.event-img {
+    width: 100%;
+    height: 250px; /* Fixed height for consistent look */
+    object-fit: cover; /* Cover the area, crop if necessary */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Branches Section Specific Styles */
+.branch-info {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+
+.branch-info h3 {
+    color: #3498db;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 10px;
+}
+
+.branch-info p {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.branch-info p strong {
+    font-weight: 600;
+    color: #555;
+}
+
+.branch-info i.fas, .branch-info i.fab {
+    color: #3498db;
+    font-size: 1.1em;
+}
+
+.branch-info .map-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 15px;
+    background-color: #28a745;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.branch-info .map-link:hover {
+    background-color: #218838;
+    text-decoration: none;
+}
+
+.branch-separator {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(52, 152, 219, 0.75), rgba(0, 0, 0, 0));
+    margin: 40px 0;
+}
+
+/* Branch Images Gallery */
+.branch-images-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.branch-img {
+    width: 100%;
+    height: 232px; /* Fixed height for consistency */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.branch-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Feedback Form Styles */
+.feedback-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group textarea {
+    width: calc(100% - 20px); /* Account for padding */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.feedback-form .btn-primary {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1em;
+}
+
+/* Contact Section Specific Styles */
+.contact-info {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+
+.contact-info h3 {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contact-info p, .contact-info a {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.contact-info a {
+    font-weight: 500;
+}
+
+.contact-note {
+    font-style: italic;
+    color: #777;
+    margin-top: 30px;
+}
+
+/* Footer */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 40px;
+    font-size: 0.9em;
+    border-top: 5px solid #3498db;
+}
+
+/* Modals (Login/Signup) */
+.modal-overlay {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1001; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 90%; /* Responsive width */
+    max-width: 500px; /* Max width for larger screens */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+    animation: zoomIn 0.3s ease-out;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.modal-content h2 {
+    text-align: center;
+    color: #3498db;
+    margin-bottom: 25px;
+}
+
+.modal-content .form-group {
+    margin-bottom: 15px;
+}
+
+.modal-content input[type="email"],
+.modal-content input[type="password"],
+.modal-content input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.modal-content .btn-primary {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Message Box for forms */
+.message-box {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+    display: none; /* Hidden by default */
+}
+
+.message-box.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message-box.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none; /* Hidden by default, only visible on mobile */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    margin-left: auto; /* Push to the right on mobile */
+    margin-right: 15px;
+}
+
+.hamburger-menu .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Animation for hamburger to close icon */
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+}
+
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+        align-items: flex-start; /* Align items to start for mobile layout */
+    }
+
+    .logo-container {
+        width: 100%; /* Full width for logo */
+        text-align: center; /* Center logo */
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .hamburger-menu {
+        display: flex; /* Show hamburger menu on mobile */
+        position: absolute; /* Position relative to header */
+        top: 25px;
+        right: 20px;
+    }
+
+    .main-nav {
+        order: 3; /* Move nav below logo and auth buttons */
+        width: 100%;
+        justify-content: center;
+        display: none; /* Hide by default on mobile */
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.3s ease-in-out;
+        max-height: 0; /* For collapse animation */
+        overflow: hidden;
+    }
+
+    .main-nav.nav-open {
+        display: flex; /* Show when active */
+        max-height: 500px; /* Sufficient height for all tabs */
+    }
+
+    .tab {
+        width: 100%;
+        flex-direction: column; /* Stack tabs vertically */
+        box-shadow: none; /* Remove shadow for stacked tabs */
+        border-radius: 0;
+    }
+
+    .tab button {
+        border-bottom: 1px solid #eee; /* Separator for stacked tabs */
+        border-radius: 0;
+        min-width: unset; /* Remove min-width for full flexibility */
+        width: 100%; /* Full width for each tab button */
+        text-align: center;
+    }
+
+    .tab button.active {
+        border-bottom: 3px solid #2980b9;
+        border-radius: 0;
+    }
+
+    .auth-buttons {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%; /* Full width for buttons */
+        justify-content: center;
+    }
+
+    .btn {
+        flex: 1; /* Distribute space evenly */
+    }
+
+    .hero-section h1 {
+        font-size: 2.5em;
+    }
+
+    .stats-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-item {
+        width: 80%; /* Make stats take more width on smaller screens */
+    }
+
+    .person-message {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .person-message:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .person-img {
+        margin-bottom: 20px;
+    }
+
+    .slide img {
+        height: 300px; /* Adjust slider height for tablets */
+    }
+    .slide-text {
+        font-size: 1.2em;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding: 10px;
+    }
+    .logo {
+        height: 50px;
+    }
+    .tab button {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    .auth-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+    }
+    .btn {
+        width: 100%;
+    }
+    .main-content {
+        padding: 15px;
+        margin: 15px auto;
+    }
+    .section-title {
+        font-size: 1.8em;
+    }
+    .slide img {
+        height: 250px; /* Further adjust slider height for smaller phones */
+    }
+    .slide-text {
+        font-size: 1em;
+        padding: 6px 12px;
+    }
+    .hero-section h1 {
+        font-size: 2em;
+    }
+    .hero-section .tagline {
+        font-size: 1.2em;
+    }
+    .stat-item {
+        min-width: unset;
+        width: 90%;
+    }
+    .event-gallery, .branch-images-gallery {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+    }
+    .modal-content {
+        padding: 20px;
+        width: 95%; /* Make modal wider on very small screens */
+    }
+    .modal-content h2 {
+        font-size: 1.5em;
+    }
+    .form-group input, .form-group textarea {
+        width: 100%; /* Ensure full width for form inputs */
+    }
+}
+
+/* NEW MEDIA QUERY FOR SMALLER PHONES (e.g., max-width 480px) */
+@media (max-width: 480px) {
+    .header {
+        padding: 10px 15px;
+    }
+    .logo {
+        height: 45px;
+    }
+    .tab button {
+        padding: 10px 8px;
+        font-size: 13px;
+        min-width: unset; /* Allow buttons to shrink more */
+    }
+    .tab {
+        gap: 0px; /* No gap for very small screens */
+    }
+    .main-content {
+        padding: 10px;
+        margin: 10px auto;
+    }
+    .section-title {
+        font-size: 1.6em;
+        margin-bottom: 25px;
+    }
+    .slide img {
+        height: 200px; /* Smallest height for slider */
+    }
+    .slide-text {
+        font-size: 0.9em;
+        padding: 5px 10px;
+        bottom: 10px; /* Adjust position */
+    }
+    .hero-section h1 {
+        font-size: 1.8em;
+    }
+    .hero-section .tagline {
+        font-size: 1em;
+    }
+    .stat-item {
+        padding: 20px 15px;
+    }
+    .stat-item .stat-number {
+        font-size: 2.2em;
+    }
+    .stat-item .stat-label {
+        font-size: 1.0em;
+    }
+    .person-message {
+        padding: 15px;
+        gap: 20px;
+    }
+    .person-img {
+        width: 100px;
+        height: 100px;
+    }
+    .program-category ul {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 10px;
+    }
+    .program-item {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+    .branch-info {
+        padding: 20px;
+    }
+    .contact-info {
+        padding: 30px 15px;
+    }
+    .contact-info h3 {
+        font-size: 1.5em;
+    }
+    .contact-info p, .contact-info a {
+        font-size: 1em;
+    }
+}

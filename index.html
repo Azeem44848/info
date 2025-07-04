@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informatics Group of Colleges</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts - Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <!-- College Logo -->
+            <img src="images/logo1.png.png" alt="Informatics Group of Colleges Logo" class="logo">
+        </div>
+
+        <!-- Hamburger menu icon for mobile -->
+        <div class="hamburger-menu" id="hamburgerMenu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <nav class="main-nav" id="mainNav">
+            <div class="tab">
+                <!-- Navigation Tabs -->
+                <button class="tablinks active" onclick="openTab(event, 'Home')">Home</button>
+                <button class="tablinks" onclick="openTab(event, 'Legacy')">Legacy</button>
+                <button class="tablinks" onclick="openTab(event, 'Program')">Programs</button>
+                <button class="tablinks" onclick="openTab(event, 'About')">About Us</button>
+                <button class="tablinks" onclick="openTab(event, 'Events')">Events</button>
+                <button class="tablinks" onclick="openTab(event, 'Branches')">Branches</button>
+                <button class="tablinks" onclick="openTab(event, 'Feedback')">Feedback</button> <!-- New Feedback Tab -->
+                <button class="tablinks" onclick="openTab(event, 'Contact')">Contact Us</button>
+            </div>
+        </nav>
+
+        <div class="auth-buttons">
+            <!-- Login and Signup Buttons -->
+            <button class="btn btn-secondary" id="loginBtn">Login</button>
+            <button class="btn btn-primary" id="signupBtn">Sign Up</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Home Tab Content -->
+        <div id="Home" class="tabcontent active">
+            <section class="image-slider">
+                <div class="slides-container">
+                    <!-- Slider Images (Placeholder) -->
+                    <div class="slide fade">
+                        <img src="images/slider.png" alt="Slider Image 1">
+                        <div class="slide-text"></div>
+                    </div>
+                    <div class="slide fade">
+                        <img src="images/slider2.png" alt="Slider Image 2">
+                        <div class="slide-text"></div>
+                    </div>
+                    <div class="slide fade">
+                        <img src="images/az1.png.png" alt="Slider Image 3">
+                        <div class="slide-text"></div>
+                    </div>
+                </div>
+                <!-- Slider Navigation Arrows -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <!-- Slider Dots -->
+                <div class="dots-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </section>
+
+            <section class="stats-section">
+                <div class="stat-item">
+                    <h1 class="stat-number animated-number" data-target="100">+100</h1>
+                    <p class="stat-label">Campuses</p>
+                </div>
+                <div class="stat-item">
+                    <h1 class="stat-number animated-number" data-target="50000">+50,000</h1>
+                    <p class="stat-label">Active Students</p>
+                </div>
+                <div class="stat-item">
+                    <h1 class="stat-number animated-number" data-target="300000">+300,000</h1>
+                    <p class="stat-label">Total Students</p>
+                </div>
+            </section>
+
+            <section class="message-section">
+                <h2 class="section-title">CEO'S MESSAGE</h2>
+                <p>As CEO, I'm incredibly proud of Informatics Group of Colleges' unwavering dedication to academic excellence and student success. We continually strive to provide an enriching and forward-thinking educational experience, equipping our graduates with the skills needed for a dynamic world. Our commitment extends beyond the classroom, fostering responsible and innovative global citizens. We believe in your potential, and we're here to guide you toward a future of endless possibilities. Together, let's build on this legacy of achievement.</p>
+            </section>
+        </div>
+
+        <!-- Legacy Tab Content -->
+        <div id="Legacy" class="tabcontent">
+            <h2 class="section-title">OUR LEGACY</h2>
+            <div class="person-message">
+                <img src="images/founder.png" alt="Founder's Image" class="person-img">
+                <div class="person-text">
+                    <h2>Founder <BR>
+                        Mian.Abdul Hafeez</h2>
+                    <p>As the founder of Informatics Group of Colleges, I envision a future where every student is empowered with the knowledge and skills to excel. We are committed to fostering an environment of innovation, critical thinking, and lifelong learning. Our dedicated faculty and state-of-the-art resources ensure a holistic educational experience. Join us, and together, let's shape a brighter future through education. Your success is our ultimate mission.</p>
+                </div>
+            </div>
+            <div class="person-message">
+                <img src="images/chairman.png" alt="Chairman's Image" class="person-img">
+                <div class="person-text">
+                    <h2>Chairman <BR>
+                    Mian.Abdul Karim</h2>
+                    <p>As Chairman, I'm incredibly proud of Informatics Group of Colleges' unwavering dedication to academic excellence and student success. We continually strive to provide an enriching and forward-thinking educational experience, equipping our graduates with the skills needed for a dynamic world. Our commitment extends beyond the classroom, fostering responsible and innovative global citizens. We believe in your potential, and we're here to guide you toward a future of endless possibilities. Together, let's build on this legacy of achievement.</p>
+                </div>
+            </div>
+            <div class="person-message">
+                <img src="images/director.png" alt="Director's Image" class="person-img">
+                <div class="person-text">
+                    <h2>Director<BR>
+                    Mian.Abdul Sattar</h2>
+                    <p>As Director, I am thrilled to witness the vibrant energy and potential within each student at Informatics Group of Colleges. Our focus is firmly on delivering a curriculum that is not only robust but also relevant to today's evolving industries. We are dedicated to nurturing well-rounded individuals, equipping them with both academic excellence and practical skills. Your journey with us will be transformative, preparing you to lead and innovate in your chosen field. We're excited to see all you'll achieve!</p>
+                </div>
+            </div>
+            <div class="person-message">
+                <img src="images/adviserboard.png" alt="Advisor Board Member's Image" class="person-img">
+                <div class="person-text">
+                    <h2>Advisor Board <BR>
+                    Abdul Wadood Ghazi</h2>
+                    <p>As Advisor of Informatics Group of Colleges, my role is to empower your academic journey and career aspirations. I'm here to provide personalized guidance, from course selection to exploring exciting career paths in IT and beyond. Let's work together to leverage the college's resources and navigate any challenges. Your success is our shared goal, and I'm committed to helping you achieve it!</p>
+                </div>
+            </div>
+            <div class="person-message">
+                <img src="images/principal.png" class="person-img">
+                <div class="person-text">
+                    <h2>Principal<BR>
+                    Faisal Randhawa </h2>
+                    <p>As Principal, I warmly welcome you to Informatics Group of Colleges, where we are dedicated to academic distinction and holistic development. Our mission is to cultivate a dynamic learning environment that fosters critical thinking, innovation, and leadership skills essential for today's rapidly evolving world. We are committed to providing you with the best resources and guidance to achieve your full potential. I am confident that your time with us will be a transformative journey towards a successful and impactful future.</p>
+                </div>
+            </div> 
+            <div class="person-message">
+                <img src="images/shahbaz.png.jpg" class="person-img">
+                <div class="person-text">
+                    <h2>Principal<BR>
+                    Muhammad Shahbaz Latif </h2>
+                    <p>As Principal, I warmly welcome you to Informatics Group of Colleges, where we are dedicated to academic distinction and holistic development. Our mission is to cultivate a dynamic learning environment that fosters critical thinking, innovation, and leadership skills essential for today's rapidly evolving world. We are committed to providing you with the best resources and guidance to achieve your full potential. I am confident that your time with us will be a transformative journey towards a successful and impactful future.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Programs Tab Content -->
+        <div id="Program" class="tabcontent">
+            <h2 class="section-title">Academic Programs</h2>
+            <div class="program-category">
+                <h3>Intermediate Programs</h3>
+                <ul>
+                    <li class="program-item"><span>ICS</span></li>
+                    <li class="program-item"><span>F.Sc. Pre-Medical</span></li>
+                    <li class="program-item"><span>F.Sc. Pre-Engineering</span></li>
+                    <li class="program-item"><span>FA.IT</span></li>
+                    <li class="program-item"><span>I.COM</span></li>
+                </ul>
+            </div>
+            <div class="program-category">
+                <h3>University Programs</h3>
+                <ul>
+                    <li class="program-item"><span>BS English</span></li>
+                    <li class="program-item"><span>BS Computer Science</span></li>
+                    <li class="program-item"><span>BS Education</span></li>
+                    <li class="program-item"><span>BS Zoology</span></li>
+                    <li class="program-item"><span>BS Mathematics</span></li>
+                    <li class="program-item"><span>BBA (Bachelor of Business Administration)</span></li>
+                    <li class="program-item"><span>B.Ed (Bachelor of Education)</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- About Tab Content -->
+        <div id="About" class="tabcontent">
+            <h2 class="section-title">About Informatics Group of Colleges</h2>
+            <p class="about-text">The Informatics Group of Colleges, located in Faisalabad, Pakistan, is an educational institution offering both intermediate and university-level programs. It aims to provide a comprehensive learning experience, focusing on equipping students with the knowledge and skills necessary for both higher education and professional careers.</p>
+            <p class="about-text"><strong>Key Aspects:</strong></p>
+            <ul>
+                <li><strong>Dual-Level Education:</strong> Informatics Group of Colleges caters to a broad spectrum of students, offering programs at the intermediate (college) level, which typically prepares students for university, as well as various bachelor's and master's degree programs.</li>
+                <li><strong>Diverse Program Offerings:</strong> The institution provides a range of disciplines, particularly in fields like Computer Science, Information Technology, Business Administration, and various Arts and Sciences programs. They have offered programs like BS Computer Science, Associate Degrees in Computer Science and Accounting & Finance, as well as various BS and Master's degrees in subjects such as English Literature, Mathematics, Chemistry, Zoology, and Education. This suggests a commitment to a multi-disciplinary approach.</li>
+                <li><strong>Focus on Practical Skills:</strong> Beyond theoretical knowledge, Informatics Group of Colleges emphasizes developing practical skills and providing students with the experience needed to succeed in their chosen future careers.</li>
+                <li><strong>Affiliations:</strong> While specific affiliations can vary and are often updated, institutions like Informatics Group of Colleges in Pakistan typically maintain affiliations with recognized universities (such as Government College University Faisalabad - GCUF, as indicated in some search results) to offer their degree programs.</li>
+                <li><strong>Commitment to Quality:</strong> The institution aims to maintain quality standards in education and has expanded its reach, sometimes through franchise partnerships, to provide accessible and up-to-date education.</li>
+            </ul>
+            <p class="about-text">In essence, Informatics Group of Colleges positions itself as a forward-thinking institution dedicated to fostering academic excellence and preparing students for the challenges and opportunities of the modern world.</p>
+        </div>
+
+        <!-- Events Tab Content -->
+        <div id="Events" class="tabcontent">
+            <h2 class="section-title">Our Events</h2>
+            <div class="event-gallery">
+                <img src="images/eventinfo1.png.jpg" alt="Painting Competition Event" class="event-img">
+                <img src="images/eventinfo2.png.jpg" alt="Talent Ministry Program Boys" class="event-img">
+                <img src="images/eventinfo3.png.jpg" alt="Talent Ministry Program Girls" class="event-img">
+                <img src="images/eventinfo4.png.jpg" alt="Freshers Welcome Party" class="event-img">
+                <img src="images/eventinfo5.png.jpg" alt="Painting Competition (Blurred)" class="event-img">
+                <img src="images/event1.png" alt="Qawali Night Painsra Campus" class="event-img">
+                <img src="images/event6.png" alt="Qawali Night FSD Campus Crowd (Blurred)" class="event-img">
+                <img src="images/event4.png" alt="Culture Day Celebration" class="event-img">
+                <img src="images/event8.png" alt="Qawali Night FSD Campus Performance 1" class="event-img">
+                <img src="images/event10.png" alt="Qawali Night FSD Campus Performance 2" class="event-img">
+            </div>
+        </div>
+
+        <!-- Branches Tab Content -->
+        <div id="Branches" class="tabcontent">
+            <h2 class="section-title">Our Branches</h2>
+            <div class="branch-info">
+        
+            <!-- Branch Images Gallery -->
+            <div class="branch-images-gallery">
+                <img src="images/branch.png.jpg" alt="Faisalabad Campus Image 1" class="branch-img">
+                <img src="images/branch2.png.jpg" alt="Faisalabad Campus Image 2" class="branch-img">
+            </div>
+             <div class="branch-info"></div>
+                <h3>Faisalabad Campus</h3>
+                <p><strong><i class="fab fa-whatsapp"></i> WhatsApp:</strong> 0322-9664068</p>
+                <p><strong><i class="far fa-envelope"></i> Email:</strong> <a href="mailto:info448@gmail.com">info448@gmail.com</a></p>
+                <p><strong><i class="fas fa-map-marker-alt"></i> Address:</strong> Sumundri Road Near Novelty Pul Faisalabad</p>
+                <a href="https://maps.app.goo.gl/My5ZTGaNBt9GLS7H8" target="_blank" class="map-link"><i class="fas fa-external-link-alt"></i> View on Map</a>
+        <br>
+            </div>
+    
+            <hr class="branch-separator">
+            <div class="branch-info">
+                <!-- Branch Images Gallery -->
+            <div class="branch-images-gallery">
+                <img src="images/painsra.png.jpg" alt="Painsra Campus Image 1" class="branch-img">
+                <img src="images/painsra2.png.jpg" alt="Painsra Campus Image 2" class="branch-img">
+            </div>
+                <h3>Painsra Campus</h3>
+                <p><strong><i class="fab fa-whatsapp"></i> WhatsApp:</strong> 0305-4200906</p>
+                <p><strong><i class="far fa-envelope"></i> Email:</strong> <a href="mailto:info448@gmail.com">info448@gmail.com</a></p>
+                <p><strong><i class="fas fa-map-marker-alt"></i> Address:</strong> Informatics College Jhang Road, Painsra</p>
+                <a href="https://maps.app.goo.gl/anBhENfWgEMWVVubA" target="_blank" class="map-link"><i class="fas fa-external-link-alt"></i> View on Map</a>
+            </div>
+            
+        </div>
+
+        <!-- New Feedback Tab Content -->
+        <div id="Feedback" class="tabcontent">
+            <h2 class="section-title">Send Us Your Feedback</h2>
+            <form class="feedback-form" id="feedbackForm">
+                <div class="form-group">
+                    <label for="feedbackName">Your Name:</label>
+                    <input type="text" id="feedbackName" name="feedbackName" required>
+                </div>
+                <div class="form-group">
+                    <label for="feedbackEmail">Your Email:</label>
+                    <input type="email" id="feedbackEmail" name="feedbackEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="feedbackMessage">Message:</label>
+                    <textarea id="feedbackMessage" name="feedbackMessage" rows="6" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Feedback</button>
+            </form>
+            <div id="feedbackMessageContainer" class="message-box"></div>
+        </div>
+
+        <!-- Contact Tab Content -->
+        <div id="Contact" class="tabcontent">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-info">
+                <h3><i class="fab fa-whatsapp"></i> WhatsApp</h3>
+                <p>+92 3229664068</p>
+                <h3><i class="far fa-envelope"></i> Email</h3>
+                <a href="mailto:info448@gmail.com">info448@gmail.com</a>
+                <p class="contact-note">Feel free to reach out to us for any queries or information!</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Informatics Group Of Colleges. All rights reserved.</p>
+    </footer>
+
+<!-- Login Modal -->
+    <div id="loginModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-button" id="closeLoginModal">&times;</span>
+            <h2>Login to Your Account</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email:</label>
+                    <input type="email" id="loginEmail" name="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" name="loginPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            <div id="loginMessageContainer" class="message-box"></div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-button" id="closeSignupModal">&times;</span>
+            <h2>Create New Account</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupName">Full Name:</label>
+                    <input type="text" id="signupName" name="signupName" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email:</label>
+                    <input type="email" id="signupEmail" name="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password:</label>
+                    <input type="password" id="signupPassword" name="signupPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupConfirmPassword">Confirm Password:</label>
+                    <input type="password" id="signupConfirmPassword" name="signupConfirmPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
+            <div id="signupMessageContainer" class="message-box"></div>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
