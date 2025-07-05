@@ -94,42 +94,6 @@ a:hover {
     border-bottom: 3px solid #2980b9;
 }
 
-.auth-buttons {
-    flex-shrink: 0;
-    margin-left: 20px;
-    display: flex;
-    gap: 10px;
-}
-
-.btn {
-    padding: 6px 6px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: 600;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.btn-primary {
-    background-color: #3498db;
-    color: white;
-}
-
-.btn-primary:hover {
-    background-color: #2980b9;
-}
-
-.btn-secondary {
-    background-color: #f0f0f0;
-    color: #3498db;
-    border: 1px solid #3498db;
-}
-
-.btn-secondary:hover {
-    background-color: #e0e0e0;
-    color: #2980b9;
-}
 
 /* Main Content Area */
 .main-content {
