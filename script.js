@@ -179,65 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
         startSlider();
     }
 
-    // --- Login/Signup Modal Logic ---
-    const loginModal = document.getElementById('loginModal');
-    const signupModal = document.getElementById('signupModal');
-    const loginBtn = document.getElementById('loginBtn');
-    const signupBtn = document.getElementById('signupBtn');
-    const closeLoginModal = document.getElementById('closeLoginModal');
-    const closeSignupModal = document.getElementById('closeSignupModal');
-
-    // Function to show a modal
-    function showModal(modalElement) {
-        modalElement.style.display = 'flex'; // Use flex to center content
-    }
-
-    // Function to hide a modal
-    function hideModal(modalElement) {
-        modalElement.style.display = 'none';
-        // Clear previous messages when closing
-        const messageBox = modalElement.querySelector('.message-box');
-        if (messageBox) {
-            messageBox.textContent = '';
-            messageBox.classList.remove('success', 'error');
-            messageBox.style.display = 'none';
-        }
-    }
-
-    // Event listeners for opening modals
-    loginBtn.addEventListener('click', () => showModal(loginModal));
-    signupBtn.addEventListener('click', () => showModal(signupModal));
-
-    // Event listeners for closing modals
-    closeLoginModal.addEventListener('click', () => hideModal(loginModal));
-    closeSignupModal.addEventListener('click', () => hideModal(signupModal));
-
-    // Close modal if user clicks outside of the modal content
-    window.addEventListener('click', function(event) {
-        if (event.target === loginModal) {
-            hideModal(loginModal);
-        }
-        if (event.target === signupModal) {
-            hideModal(signupModal);
-        }
-    });
-
-    // --- Form Submission Handlers (Placeholder) ---
-    const feedbackForm = document.getElementById('feedbackForm');
-    const loginForm = document.getElementById('loginForm');
-    const signupForm = document.getElementById('signupForm');
-    const feedbackMessageContainer = document.getElementById('feedbackMessageContainer');
-    const loginMessageContainer = document.getElementById('loginMessageContainer');
-    const signupMessageContainer = document.getElementById('signupMessageContainer');
-
-    // Generic function to display messages
-    function displayMessage(container, message, type) {
-        container.textContent = message;
-        container.classList.remove('success', 'error'); // Clear previous types
-        container.classList.add(type);
-        container.style.display = 'block';
-    }
-
+  
     // Feedback Form Submission
     if (feedbackForm) {
         feedbackForm.addEventListener('submit', function(event) {
@@ -265,54 +207,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Login Form Submission
-    if (loginForm) {
-        loginForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            const email = document.getElementById('loginEmail').value;
-            const password = document.getElementById('loginPassword').value;
-
-            console.log('Login Attempt:', { email, password });
-
-            // Simulate login success/failure
-            {
-                displayMessage(loginMessageContainer, 'Login successful!', 'success');
-                setTimeout(() => {
-                    hideModal(loginModal);
-                }, 1500);
-            } 
-        });
-    }
-
-    // Signup Form Submission
-    if (signupForm) {
-        signupForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            const name = document.getElementById('signupName').value;
-            const email = document.getElementById('signupEmail').value;
-            const password = document.getElementById('signupPassword').value;
-            const confirmPassword = document.getElementById('signupConfirmPassword').value;
-
-            console.log('Signup Attempt:', { name, email, password, confirmPassword });
-
-            if (password !== confirmPassword) {
-                displayMessage(signupMessageContainer, 'Passwords do not match.', 'error');
-                return;
-            }
-
-            // Simulate signup success/failure
-            if (password.length < 6) {
-                displayMessage(signupMessageContainer, 'Password must be at least 6 characters long.', 'error');
-            } else {
-                displayMessage(signupMessageContainer, 'Account created successfully!', 'success');
-                setTimeout(() => {
-                    hideModal(signupModal);
-                }, 1500);
-            }
-        });
-    }
+    
 
     // --- Mobile Hamburger Menu Logic ---
     const hamburgerMenu = document.getElementById('hamburgerMenu');
